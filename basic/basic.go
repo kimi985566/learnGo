@@ -1,7 +1,8 @@
 package main
 
 import (
-	"fmt"
+"fmt"
+"math/cmplx"
 )
 
 //包内部变量
@@ -33,6 +34,11 @@ func variableShorter() {
 	fmt.Println(a, b, c, d)
 }
 
+func euler() {
+	c := 3 + 4i
+	fmt.Println(cmplx.Abs(c))
+}
+
 func main() {
 	fmt.Println("Hello,world")
 	variableZeroValue()
@@ -40,4 +46,6 @@ func main() {
 	variableTypeDeduction()
 	variableShorter()
 	fmt.Println(aa, kk)
+
+	euler()
 }
