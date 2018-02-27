@@ -1,9 +1,9 @@
 package main
 
 import (
-	"fmt"
-	"math/cmplx"
-	"math"
+"fmt"
+"math/cmplx"
+"math"
 )
 
 //包内部变量
@@ -66,7 +66,7 @@ func enums() {
 		tb
 		pb
 	)
-	fmt.Println(b, kb, mb, gb,tb,gb)
+	fmt.Println(b, kb, mb, gb, tb, gb)
 }
 
 func main() {
@@ -82,3 +82,4 @@ func main() {
 	consts()
 	enums()
 }
+
