@@ -1,8 +1,9 @@
 package main
 
 import (
-"fmt"
-"math/cmplx"
+	"fmt"
+	"math/cmplx"
+	"math"
 )
 
 //包内部变量
@@ -37,6 +38,35 @@ func variableShorter() {
 func euler() {
 	c := 3 + 4i
 	fmt.Println(cmplx.Abs(c))
+	fmt.Println(cmplx.Exp(1i*math.Pi) + 1)
+	fmt.Printf("%.3f\n", cmplx.Exp(1i*math.Pi)+1)
+}
+
+func triangle() {
+	var a, b int = 3, 4
+	var c int
+	c = int(math.Sqrt(float64(a*a + b*b)))
+	fmt.Println(c)
+}
+
+func consts() {
+	const (
+		a, b = 3, 4
+		s    = "abc.txt"
+	)
+	fmt.Println(a, b, s)
+}
+
+func enums() {
+	const (
+		b  = 1 << (10 * iota)
+		kb
+		mb
+		gb
+		tb
+		pb
+	)
+	fmt.Println(b, kb, mb, gb,tb,gb)
 }
 
 func main() {
@@ -48,4 +78,7 @@ func main() {
 	fmt.Println(aa, kk)
 
 	euler()
+	triangle()
+	consts()
+	enums()
 }
